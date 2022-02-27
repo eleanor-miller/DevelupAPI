@@ -5,9 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using DevelupAPI.Models;
+using WipStitchAPI.Models;
 
-namespace DevelupAPI
+namespace WipStitchAPI
 {
     public class Startup
     {
@@ -32,7 +32,7 @@ namespace DevelupAPI
             // Configure the Swagger documentation engine to generate documentation for our API
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevelupAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WipStitchAPI", Version = "v1" });
             });
 
             // Configure the class to use for a DatabaseContext
@@ -74,7 +74,7 @@ namespace DevelupAPI
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "DevelupAPI");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "WipStitchAPI");
                 c.RoutePrefix = String.Empty;
             });
 

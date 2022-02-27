@@ -7,7 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
-namespace DevelupAPI.Utils
+namespace WipStitchAPI.Utils
 {
     public class Utilities
     {
@@ -70,8 +70,8 @@ namespace DevelupAPI.Utils
                 {
                     StartInfo = new ProcessStartInfo
                     {
-                        FileName = "develup",
-                        Arguments = $"toast \"{message}\" \"DevelupAPI\"",
+                        FileName = "wipstitch",
+                        Arguments = $"toast \"{message}\" \"WipStitchAPI\"",
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,
                         UseShellExecute = false,

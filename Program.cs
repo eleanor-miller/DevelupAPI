@@ -1,11 +1,13 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using DevelupAPI.Models;
-using DevelupAPI.Utils;
+using Microsoft.Extensions.Logging;
+using WipStitchAPI.Models;
+using WipStitchAPI.Utils;
 
-namespace DevelupAPI
+namespace WipStitchAPI
 {
     public class Program
     {
@@ -26,7 +28,7 @@ namespace DevelupAPI
 
             var task = host.RunAsync();
 
-            Utilities.Notify("DevelupAPI Running!");
+            Utilities.Notify("WipStitchAPI Running!");
 
             WebHostExtensions.WaitForShutdown(host);
         }
